@@ -33,5 +33,14 @@ contract NFTMarketplace is ERC721URIStorage {
         uint256 price,
         bool sold
     )
+
+    constructor() ERC721("Metaverse Tokens", "METT") {
+        owner = payable(msg.sender);
+    }
+
+    function updateListingPrice(uint _listingPrice) public payable {
+        require(owner == msg.sender, "Only marketplace owner can update listing price");
+        listingPrice = _listingPrice
+    }
 }
 
