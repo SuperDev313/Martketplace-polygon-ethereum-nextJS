@@ -46,9 +46,18 @@ export default function CreateItem() {
           placeholder="Asset Description"
           className="mt-2 border rounded p-4"
           onChange={(e) =>
+            updateFormInput({ ...formInput, description: e.target.value })
+          }
+        />
+        <input
+          placeholder="Asset Price in Eth"
+          className="mt-2 border rounded p-4"
+          onChange={(e) =>
             updateFormInput({ ...formInput, price: e.target.value })
           }
         />
+        <input type="file" name="Asset" className="my-4" onChange={onChange} />
+        {fileUrl && <img className="rounded mt-4" width="350" src={fileUrl} />}
       </div>
     </div>
   );
