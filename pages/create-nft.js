@@ -42,6 +42,13 @@ export default function CreateItem() {
             updateFormInput({ ...formInput, name: e.target.value })
           }
         />
+        <textarea
+          placeholder="Asset Description"
+          className="mt-2 border rounded p-4"
+          onChange={(e) =>
+            updateFormInput({ ...formInput, price: e.target.value })
+          }
+        />
       </div>
     </div>
   );
