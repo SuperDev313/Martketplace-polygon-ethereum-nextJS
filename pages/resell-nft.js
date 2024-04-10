@@ -12,6 +12,12 @@ export default function ResellNFT() {
   const { id, tokenURI } = router.query;
   const { image, price } = formInput;
 
+  async function fetchNFT() {
+    if (!tokenURI) return;
+    const meta = await axios.get(tokenURI);
+    updateFormInput((state) => ({ ...state, image: meta.data.image }));
+  }
+  
   return (
     <div className="flex justify-center">
       <input
