@@ -48,6 +48,12 @@ export default function MyAssets() {
     setNfts(items);
     setLoadingState("loaded");
   }
+
+  function listNFT(nft) {
+    console.log("nft:", nft);
+    router.push(`/resell-nft?id=${nft.tokenId}&tokenURI=${nft.tokenURI}`);
+  }
+
   return (
     <div className="flex justify-center">
       <div className="p-4"></div>
