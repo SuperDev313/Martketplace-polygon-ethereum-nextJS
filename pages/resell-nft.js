@@ -5,6 +5,7 @@ import axios from "axios";
 import web3Modal from "web3modal";
 
 import { marketplaceAddress } from ".../config";
+import NFTMarketplace from '../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json'
 
 export default function ResellNFT() {
   const [formInput, updateFormInput] = useState({ price: "", image: "" });
