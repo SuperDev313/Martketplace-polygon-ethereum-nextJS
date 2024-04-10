@@ -10,3 +10,11 @@ import {
 
 
 import NFTMarketPlace from '../artifacts/contracts/NFTMarketPlace.sol/NFTMarketPlace.json'
+
+export default funtion MyAssets() {
+    return (
+        <div className='flex justify-center'>
+            <div className='p-4'></div>
+        </div>
+    )
+}
