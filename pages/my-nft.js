@@ -11,7 +11,15 @@ import {
 
 import NFTMarketPlace from '../artifacts/contracts/NFTMarketPlace.sol/NFTMarketPlace.json'
 
-export default funtion MyAssets() {
+export default function MyAssets() {
+    const [nfts, setNfts] = useState([])
+    const [loadingState, setLoadingState] = useState('not-loaded')
+    const router = useRouter()
+
+    useEffect(() => {
+        loadNFTs()
+    }, [])
+    
     return (
         <div className='flex justify-center'>
             <div className='p-4'></div>
